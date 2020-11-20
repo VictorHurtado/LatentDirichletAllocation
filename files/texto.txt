@@ -1,0 +1,25 @@
+Luego  de  realizar  un  análisis  de  cada  uno  de  los  términos  que  se  encuentran  al  interior  de las  distintas búsquedas hechas que las podría encontrar en:    
+    
+    file location: Keylogger/files/Busquedas.csv
+
+se  han  detectado  5  tópicos  latentes  al  interior,  por  lo  tanto  dentro  de  cada  tópico  se  han  clasificado  los términos y su nivel de relevancia por cada uno, a continuación podrá evidenciar cual es el termino más relevante dentro del topico:
+
+Topicos en el modelo LDA :
+Topico 0: excel 3  orden 3  gratis 3  point 3  power 3 
+Topico 1: instagram 6  control 5  facebook 5  remoto 4  ventilador 4 
+Topico 2: nessus 5  discord 4  pc 3  iniciar 3  tiroides 3 
+Topico 3: matriz 5  google 4  play 3  store 3  dofa 3 
+Topico 4: vida 7  calidad 5  whatsapp 4  libre 3  motos 3 
+
+
+Finalmente, luego de analizar cuál es la relevancia de cada tópico al interior de cada uno de las búsquedas, se logra detectar que el tópico relevante es: 
+
+Dominante: Topico- 0
+
+Para  conocer  cuáles  son  el  listado  completo  de  términos  de  forma  interactiva,  accede  al  siguiente  archivo alojado en tu computadora: 
+
+
+  file location: KeyLogger/files/graphics.html
+
+
+pdt: Recuerda que el topico dominante es aquel que predomina entre el conjunto de busquedas, este topico permite identificar cuales son los terminos de importancia  para ti, pues las palabras pertenecen a este son las que representan las busquedas que mas predominan en tu trabajador.

